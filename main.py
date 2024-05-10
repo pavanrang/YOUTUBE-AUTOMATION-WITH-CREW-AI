@@ -1,44 +1,9 @@
-# ██████╗   ███████╗ ██╗    ██╗ ███████╗            ██████╗    ██████╗             ██████╗   ██████╗    ██████╗   ███████╗
-# ██╔══██╗ ██╔════╝ ██║    ██║ ██╔════╝            ██╔══██╗ ██╔═══██╗         ██╔════╝ ██╔═══██╗ ██╔══██╗ ██╔════╝
-# ██║    ██║ █████╗     ██║    ██║ ███████╗            ██║    ██║ ██║      ██║         ██║           ██║      ██║ ██║    ██║ █████╗  
-# ██║    ██║ ██╔══╝    ╚██╗  ██╔╝ ╚════██║           ██║    ██║ ██║      ██║         ██║           ██║      ██║ ██║    ██║ ██╔══╝  
-# ██████╔╝ ███████╗  ╚████╔╝  ███████║            ██████╔╝╚██████╔╝         ╚██████╗ ╚██████╔╝  ██████╔╝ ███████╗
-# ╚═════╝  ╚══════╝    ╚═══╝     ╚══════╝            ╚═════╝    ╚═════╝             ╚═════╝   ╚═════╝    ╚═════╝   ╚══════╝
-
-
-#  Made With 💓 By - Sree ( Devs Do Code )
-#  YouTube Channel: https://www.youtube.com/@devsdocode
-
-#  For any questions or concerns, reach out to us via our social media handles.
-#  Our top choice for contact is Telegram: https://t.me/devsdocode
-#  You can also find us on other platforms listed above. We're here to help!
-
-#  - YouTube Channel: https://www.youtube.com/@DevsDoCode
-#  - Telegram Group: https://t.me/devsdocode
-#  - Discord Server: https://discord.gg/ehwfVtsAts
-#  - Instagram:
-#    - Personal: https://www.instagram.com/sree.shades_/
-#    - Channel: https://www.instagram.com/devsdocode_/
-
-#  ------------------------------------------------------------------------------
-#  Dive into the world of coding with Devs Do Code - where passion meets programming!
-#  Make sure to hit that Subscribe button to stay tuned for exciting content!
-
-#  Pro Tip: For optimal performance and a seamless experience, we recommend using
-#  the default library versions demonstrated in this demo. Your coding journey just
-#  got even better! Happy coding!
-#  ----------------------------------------------------------------------------
-
-
 from crewai import Crew, Process
-
 from agents import YoutubeAutomationAgents
 from tasks import YoutubeAutomationTasks
-
 from langchain_openai import ChatOpenAI
 from langchain_cohere import ChatCohere
 from langchain_groq import ChatGroq
-
 from tools.youtube_video_details_tool import YoutubeVideoDetailsTool
 from tools.youtube_video_search_tool import YoutubeVideoSearchTool
 
@@ -51,22 +16,6 @@ openAI_groq_mistral = ChatOpenAI(
     api_key='gsk_xQa4mRS2YhaQHbDbVvZTWGdyb3FY0.......'
 )
 
-# groq_mistral = ChatGroq(
-#             api_key="gsk_xQa4mRS2YhaQHbDbVvZTWGdyb3FY0JI8U.....",
-#             model="mixtral-8x7b-32768"
-# )
-
-
-# cohere_command_r_plus = ChatCohere(
-#     cohere_api_key='9lmXAKqVY7o42K0NynBfA.......',
-#     model="command-r-plus"
-# )
-
-
-# gpt_4 = ChatOpenAI(
-#     model = "gpt-4-0314",
-#     api_key="sk-a1b2c3d4e5f6g7h8i9j0k1l2m3n4........."
-# )
 
 agents = YoutubeAutomationAgents()
 tasks = YoutubeAutomationTasks()
